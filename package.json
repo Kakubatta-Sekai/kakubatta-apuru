@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test",
-    "prepare": "husky install"
+    "build:ci": "nx run-many --target build --all",
+    "test:ci": "nx run-many --target lint --all --configuration ci",
+    "lint:ci": "nx run-many --target test --all --configuration ci"
   },
   "private": true,
   "dependencies": {
