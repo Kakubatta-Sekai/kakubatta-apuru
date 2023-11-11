@@ -376,6 +376,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/localize@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "@angular/localize@npm:17.0.2"
+  dependencies:
+    "@babel/core": "npm:7.23.2"
+    fast-glob: "npm:3.3.1"
+    yargs: "npm:^17.2.1"
+  peerDependencies:
+    "@angular/compiler": 17.0.2
+    "@angular/compiler-cli": 17.0.2
+  bin:
+    localize-extract: tools/bundles/src/extract/cli.js
+    localize-migrate: tools/bundles/src/migrate/cli.js
+    localize-translate: tools/bundles/src/translate/cli.js
+  checksum: 4fc569f99a7255d35d4483ded0bc0a18bb311ade8095119bcafa60beebc8fbabb6f01dd346cc33c8ea0b93634ca787337f61165ad520f593a85a053c30cbd736
+  languageName: node
+  linkType: hard
+
 "@angular/platform-browser-dynamic@npm:~17.0.0":
   version: 17.0.2
   resolution: "@angular/platform-browser-dynamic@npm:17.0.2"
@@ -3008,6 +3026,7 @@ __metadata:
     "@angular/core": "npm:~17.0.0"
     "@angular/forms": "npm:~17.0.0"
     "@angular/language-service": "npm:~17.0.0"
+    "@angular/localize": "npm:^17.0.2"
     "@angular/platform-browser": "npm:~17.0.0"
     "@angular/platform-browser-dynamic": "npm:~17.0.0"
     "@angular/platform-server": "npm:~17.0.0"
@@ -3016,12 +3035,14 @@ __metadata:
     "@commitlint/cli": "npm:^17.0.0"
     "@commitlint/config-angular": "npm:^17.0.0"
     "@jscutlery/semver": "npm:^4.0.0"
+    "@ng-bootstrap/ng-bootstrap": "npm:^16.0.0-rc.0"
     "@nx/angular": "npm:17.1.1"
     "@nx/eslint": "npm:17.1.1"
     "@nx/eslint-plugin": "npm:17.1.1"
     "@nx/jest": "npm:17.1.1"
     "@nx/js": "npm:17.1.1"
     "@nx/workspace": "npm:17.1.1"
+    "@popperjs/core": "npm:^2.11.6"
     "@schematics/angular": "npm:~17.0.0"
     "@swc-node/register": "npm:~1.6.7"
     "@swc/core": "npm:~1.3.85"
@@ -3030,6 +3051,7 @@ __metadata:
     "@types/node": "npm:16.11.7"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.1"
     "@typescript-eslint/parser": "npm:^6.9.1"
+    bootstrap: "npm:^5.2.3"
     eslint: "npm:~8.46.0"
     eslint-config-prettier: "npm:^9.0.0"
     express: "npm:~4.18.2"
@@ -3062,6 +3084,22 @@ __metadata:
   dependencies:
     call-bind: "npm:^1.0.2"
   checksum: 19cdaa9e4ba16aea9bb9dafbdd1c111febc0e5ce07b0959b049d7fda8a7247726603bb06b391f2d57227cf4ad081636d6f9e08dc138813225d54a6c81a04b679
+  languageName: node
+  linkType: hard
+
+"@ng-bootstrap/ng-bootstrap@npm:^16.0.0-rc.0":
+  version: 16.0.0-rc.0
+  resolution: "@ng-bootstrap/ng-bootstrap@npm:16.0.0-rc.0"
+  dependencies:
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/common": ^17.0.0
+    "@angular/core": ^17.0.0
+    "@angular/forms": ^17.0.0
+    "@angular/localize": ^17.0.0
+    "@popperjs/core": ^2.11.8
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 6bb37ae2635b91bd262e54407859f5dd241eb90db8b10ccf93da98a4b34db8b0491c2499714eae85cdec88c8d0a94bd5376eec3120cc3bc241ea64475834acc5
   languageName: node
   linkType: hard
 
@@ -3626,6 +3664,13 @@ __metadata:
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
   checksum: 5bd7576bb1b38a47a7fc7b51ac9f38748e772beebc56200450c4a817d712232b8f1d3ef70532c80840243c657d491cf6a6be1e3a214cff907645819fdc34aadd
+  languageName: node
+  linkType: hard
+
+"@popperjs/core@npm:^2.11.6":
+  version: 2.11.8
+  resolution: "@popperjs/core@npm:2.11.8"
+  checksum: 4681e682abc006d25eb380d0cf3efc7557043f53b6aea7a5057d0d1e7df849a00e281cd8ea79c902a35a414d7919621fc2ba293ecec05f413598e0b23d5a1e63
   languageName: node
   linkType: hard
 
@@ -5345,6 +5390,15 @@ __metadata:
   version: 1.0.0
   resolution: "boolbase@npm:1.0.0"
   checksum: e4b53deb4f2b85c52be0e21a273f2045c7b6a6ea002b0e139c744cb6f95e9ec044439a52883b0d74dedd1ff3da55ed140cfdddfed7fb0cccbed373de5dce1bcf
+  languageName: node
+  linkType: hard
+
+"bootstrap@npm:^5.2.3":
+  version: 5.3.2
+  resolution: "bootstrap@npm:5.3.2"
+  peerDependencies:
+    "@popperjs/core": ^2.11.8
+  checksum: 0c108d90cee90247db571f07a0fc3718beda58eed2ffed3f2f8ccff66b25a349830dfbeb5e55e6e6fe484fad96c4edb19cb4c5fa5a68b771b2e0f3c400e42dda
   languageName: node
   linkType: hard
 
