@@ -8,6 +8,10 @@ on:
       - "**/*.md"
   pull_request:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
+
 # Needed for nx-set-shas within nx-cloud-main.yml, when run on the main branch
 permissions:
   actions: read
@@ -18,16 +22,11 @@ jobs:
     name: Nx Cloud - Main Job
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.13.1
     with:
-      main-branch-name: main
       number-of-agents: 3
-      init-commands: |
-        yarn nx-cloud start-ci-run --stop-agents-after="build" --agent-count=3
       parallel-commands: |
         yarn nx-cloud record -- yarn nx format:check
       parallel-commands-on-agents: |
-        yarn nx affected --target=lint --parallel=3
-        yarn nx affected --target=test --parallel=3 --ci --code-coverage
-        yarn nx affected --target=build --parallel=3
+        yarn nx affected -t lint,test,build --parallel=2
 
   agents:
     name: Nx Cloud - Agents
