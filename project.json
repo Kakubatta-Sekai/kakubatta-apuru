@@ -80,6 +80,13 @@
       "options": {
         "jestConfig": "jest.config.ts"
       }
+    },
+    "deploy": {
+      "builder": "angular-cli-ghpages:deploy",
+      "options": {
+        "baseHref": "/kakubatta-apuru/",
+        "name": "Kakubatta Sekai"
+      }
     }
   }
 }

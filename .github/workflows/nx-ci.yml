@@ -1,9 +1,11 @@
-name: Nx CI
+name: Nx Cloud CI
 
 on:
   push:
     branches:
-      - main
+      - main    
+    paths-ignore:
+      - "**/*.md"
   pull_request:
 
 # Needed for nx-set-shas within nx-cloud-main.yml, when run on the main branch
